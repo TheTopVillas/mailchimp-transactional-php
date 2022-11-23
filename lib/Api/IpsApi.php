@@ -103,7 +103,7 @@ class IpsApi
      * List ip addresses
      * Lists your dedicated IPs.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/ips/list', $body);
     }

@@ -71,7 +71,7 @@ class ExportsApi
      * List exports
      * Returns a list of your exports.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/exports/list', $body);
     }

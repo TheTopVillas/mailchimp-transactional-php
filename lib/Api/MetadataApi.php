@@ -71,7 +71,7 @@ class MetadataApi
      * List metadata fields
      * Get the list of custom metadata fields indexed for the account.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/metadata/list', $body);
     }

@@ -79,7 +79,7 @@ class SubaccountsApi
      * List subaccounts
      * Get the list of subaccounts defined for the account, optionally filtered by a prefix.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/subaccounts/list', $body);
     }

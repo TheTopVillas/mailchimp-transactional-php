@@ -79,7 +79,7 @@ class WebhooksApi
      * List webhooks
      * Get the list of all webhooks defined on the account.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/webhooks/list', $body);
     }

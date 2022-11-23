@@ -71,7 +71,7 @@ class RejectsApi
      * List blacklisted emails
      * Retrieves your email rejection blacklist. You can provide an email address to limit the results. Returns up to 1000 results. By default, entries that have expired are excluded from the results; set include_expired to true to include them.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/rejects/list', $body);
     }

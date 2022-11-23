@@ -71,7 +71,7 @@ class WhitelistsApi
      * List whitelisted emails
      * Retrieves your email rejection whitelist. You can provide an email address or search prefix to limit the results. Returns up to 1000 results.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/whitelists/list', $body);
     }

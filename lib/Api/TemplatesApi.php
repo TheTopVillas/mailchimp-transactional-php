@@ -79,7 +79,7 @@ class TemplatesApi
      * List templates
      * Return a list of all the templates available to this user.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/templates/list', $body);
     }

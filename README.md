@@ -74,6 +74,32 @@ You can also set the response format for a **single request** by passing in a sp
 $mailchimp->senders->list([ 'outputFormat' => 'php']);
 ```
 
+## Sending template with variables
+
+### Mandrill Template
+```
+*|FOO|*
+```
+
+### Sending in PHP
+
+```php
+$response = $mailchimp->messages->sendTemplate([
+    'template_name' => 'test-template-slug',
+    'template_content' => [['name' => '_', 'content' => '_']], // unused by required 🤡
+    'message' => [
+        'to' => [
+            ['email' => 'you@test.email', 'name' => 'test', 'type' => 'to'],
+        ],
+        'global_merge_vars' => [
+            ['name' => 'FOO', 'content' => 'bar'],
+        ],
+    ]
+]);
+```
+
+
+
 ## API Endpoints
 
 All URIs are relative to *https://mandrillapp.com/api/1.0*

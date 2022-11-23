@@ -71,7 +71,7 @@ class UrlsApi
      * List most clicked urls
      * Get the 100 most clicked URLs.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/urls/list', $body);
     }

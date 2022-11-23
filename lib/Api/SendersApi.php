@@ -87,7 +87,7 @@ class SendersApi
      * List account senders
      * Return the senders that have tried to use this account.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/senders/list', $body);
     }

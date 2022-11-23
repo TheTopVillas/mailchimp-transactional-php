@@ -79,7 +79,7 @@ class TagsApi
      * List tags
      * Return all of the user-defined tag information.
      */
-    public function list($body = [])
+    public function listAll($body = [])
     {
         return $this->config->post('/tags/list', $body);
     }
